@@ -1,0 +1,113 @@
+/* Basic body and font styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navigation bar container */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between; /* This pushes logo left and links right */
+    align-items: center;
+    padding: 0 20px; /* Adds some spacing */
+    border-bottom: 2px solid #000; /* Matches the solid line in your sketch */
+}
+
+/* Logo styling */
+.navbar .logo {
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+    padding: 14px 0;
+}
+
+/* Navigation links list */
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Makes links align horizontally */
+}
+
+/* Styling for all nav links */
+.nav-links li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-transform: capitalize; /* Makes "lab courses" look like "Lab Courses" */
+}
+
+/* Link hover effect (non-dropdown) */
+.nav-links li a:hover:not(.dropbtn) {
+    background-color: #555;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Hover effect for dropdown links */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* This is the magic part: Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change background of the dropdown button when a dropdown is shown */
+.dropdown:hover .dropbtn {
+    background-color: #555;
+}
+
+/* Main content area for demonstration */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* --- NEW CODE YOU ADDED --- */
+
+/* Hides the entire page when a user tries to print */
+@media print {
+  body {
+    display: none;
+  }
+}
+
+/* Disables text selection/highlighting for the whole page */
+body {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Safari */
+  -khtml-user-select: none;    /* Konqueror HTML */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Standard */
+}
